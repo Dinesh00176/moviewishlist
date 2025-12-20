@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist - CineList</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="brand">
+                <h1>My Movies</h1>
+                <p>Digital Collection</p>
+            </div>
+
+            <nav class="header-actions">
+                <a href="index.html" class="nav-link">Add Movie</a>
+                <a href="wishlist.html" class="nav-link active">My Wishlist</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="movie-list-section">
+                <!-- Using the same structure as index but without the form -->
+                <div class="list-header" style="border: none;">
+                    <div class="filter-bar" style="display: flex; gap: 1rem; align-items: center;">
+                        <h2 style="border: none; padding: 0; margin: 0; color: #fff;">My Collection</h2>
+                        <span class="count-badge" id="movie-count" style="color: #666; font-size: 0.9rem;">0
+                            movies</span>
+                    </div>
+                    <!-- Could add sort dropdowns here later -->
+                </div>
+
+                <div id="movie-grid" class="movie-grid">
+                    <!-- Movie cards injected here -->
+                    <div class="movie-card skeleton"></div>
+                    <div class="movie-card skeleton"></div>
+                    <div class="movie-card skeleton"></div>
+                    <div class="movie-card skeleton"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

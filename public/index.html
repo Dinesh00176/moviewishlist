@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineList - Portable Movie Wishlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="brand">
+                <h1>My Movies</h1>
+                <p>Digital Collection</p>
+            </div>
+
+            <nav class="header-actions">
+                <a href="index.html" class="nav-link active">Add Movie</a>
+                <a href="wishlist.html" class="nav-link">My Wishlist</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="add-movie-section">
+                <form id="add-movie-form" novalidate>
+                    <div class="form-title">Add to Collection</div>
+                    <div class="form-grid">
+                        <div class="input-group full-width">
+                            <input type="text" id="movie-title" placeholder=" " required autocomplete="off">
+                            <label for="movie-title">Movie Title</label>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <input type="url" id="movie-image" placeholder=" " autocomplete="off">
+                            <label for="movie-image">Image URL (Poster)</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="movie-genre" placeholder=" " required autocomplete="off"
+                                list="genre-suggestions">
+                            <label for="movie-genre">Genre</label>
+                            <datalist id="genre-suggestions">
+                                <option value="Action">
+                                <option value="Adventure">
+                                <option value="Animation">
+                                <option value="Comedy">
+                                <option value="Crime">
+                                <option value="Documentary">
+                                <option value="Drama">
+                                <option value="Family">
+                                <option value="Fantasy">
+                                <option value="Horror">
+                                <option value="Mystery">
+                                <option value="Romance">
+                                <option value="Sci-Fi">
+                                <option value="Thriller">
+                                <option value="War">
+                                <option value="Western">
+                            </datalist>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="number" id="movie-year" placeholder=" " required min="1888" max="2100"
+                                step="1">
+                            <label for="movie-year">Year</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="number" id="movie-rating" placeholder=" " min="0" max="10" step="1">
+                            <label for="movie-rating">Rating (0-10)</label>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; text-align: right;">
+                        <button type="submit" class="btn-primary">
+                            <span class="icon">+</span> Add to Collection
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="movie-list-section">
+                <div class="list-header">
+                    <h2>Wishlist</h2>
+                    <span class="count-badge" id="movie-count" style="color: #666; font-size: 0.9rem;">0 movies</span>
+                </div>
+                <div id="movie-grid" class="movie-grid">
+                    <!-- Movie cards injected here -->
+                    <!-- Skeleton loader for initial state -->
+                    <div class="movie-card skeleton"></div>
+                    <div class="movie-card skeleton"></div>
+                    <div class="movie-card skeleton"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
