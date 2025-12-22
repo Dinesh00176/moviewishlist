@@ -1,4 +1,6 @@
-const API_URL = '/movies';
+const API_URL = 'https://your-backend.onrender.com/api/movies';
+
+
 const movieGrid = document.getElementById('movie-grid');
 const movieCount = document.getElementById('movie-count');
 const addMovieForm = document.getElementById('add-movie-form');
