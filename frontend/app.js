@@ -1,4 +1,4 @@
-const API_URL = 'https://your-backend.onrender.com/api/movies';
+const API_URL = 'https://moviewishlist.onrender.com/api/movies';
 
 
 const movieGrid = document.getElementById('movie-grid');
